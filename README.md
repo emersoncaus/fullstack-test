@@ -1,6 +1,6 @@
 # Teste Técnico Fullstack - Candidato
 
-Este projeto é um teste técnico de desenvolvimento Fullstack, composto por um backend em Python (Flask) e um frontend em React.
+Este projeto é um teste técnico de desenvolvimento Fullstack, composto por um backend em .NET e um frontend em React.
 
 ## Objetivo do Teste
 
@@ -16,31 +16,31 @@ O frontend já está configurado para buscar a lista de alunos e suas notas do b
 
 O projeto está dividido em dois diretórios principais:
 
-1.  `backend/`: Contém a API RESTful em Flask.
+1.  `backend-dotnet/`: Contém a API RESTful em .NET Core.
 2.  `frontend/aluno-app/`: Contém a aplicação de página única em React.
 
-## 1. Configuração e Execução do Backend (Flask)
+## 1. Configuração e Execução do Backend (.NET)
 
 O backend é uma API simples que expõe um endpoint para obter os dados dos alunos.
 
 ### Pré-requisitos
-*   Python 3.x
+*   .NET 8.0 SDK ou superior
 
 ### Passos para Execução
 
 1.  **Navegue até o diretório do backend:**
-    cd backend
+    ```bash
+    cd backend-dotnet
+    ```
 
-**Instale as dependências:**
-    pip install Flask Flask-CORS
+2.  **Execute a aplicação .NET:**
+    ```bash
+    dotnet run
+    ```
 
+    A API estará rodando em `http://localhost:5000`. O endpoint de dados é `http://localhost:5000/api/alunos`.
 
-**Execute a aplicação Flask:**
-    python app.py
-
-    A API estará rodando em `http://127.0.0.1:5000`. O endpoint de dados é `http://127.0.0.1:5000/api/alunos`.
-
-## Configuração e Execução do Frontend (React)
+## 2. Configuração e Execução do Frontend (React)
 
 O frontend é uma aplicação React criada com Vite.
 
@@ -51,15 +51,28 @@ O frontend é uma aplicação React criada com Vite.
 ### Passos para Execução
 
 1.  **Navegue até o diretório do frontend:**
-    cd ../frontend/aluno-app
+    ```bash
+    cd frontend/aluno-app
+    ```
 
 2.  **Instale as dependências:**
+    ```bash
     npm install
+    ```
 
 3.  **Execute a aplicação React:**
+    ```bash
     npm run dev
+    ```
 
     A aplicação estará rodando em `http://localhost:5173` (ou outra porta, verifique o console).
+
+---
+
+## Observações
+
+- **Backend Legado (Python):** O diretório `backend/` contém a versão original em Python/Flask, que foi substituída pela versão .NET em `backend-dotnet/`. Use o backend .NET para o teste.
+- Certifique-se de que o backend está rodando antes de iniciar o frontend.
 
 
 
